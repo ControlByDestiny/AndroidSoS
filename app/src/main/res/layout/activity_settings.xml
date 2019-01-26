@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SettingsActivity">
+    <!--ToolBar Start-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:text="修改信息"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/titleSize" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_confirm" />
+    </LinearLayout>
+    <!--ToolBar End-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--Name Start-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="姓名"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+
+            <CheckBox
+                android:id="@+id/act_btn_show_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/selector_item_status"
+                android:button="@null"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/name_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="紧急联系人姓名:"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_et_input"
+                android:hint="请输入联系人姓名"
+                android:inputType="text"
+                android:paddingStart="8dp"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+        </LinearLayout>
+
+        <!--Name End-->
+
+        <!--Tel Start-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="联系方式"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+
+            <CheckBox
+                android:id="@+id/act_btn_show_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/selector_item_status"
+                android:button="@null"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tel_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="紧急联系人手机:"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_et_input"
+                android:hint="请输入联系人手机"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingStart="8dp"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+        </LinearLayout>
+
+        <!--Tel End-->
+
+        <!--Msg Start-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="短信内容"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+
+            <CheckBox
+                android:id="@+id/act_btn_show_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/selector_item_status"
+                android:button="@null"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/msg_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="求助短信内容:"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_et_input"
+                android:gravity="top"
+                android:hint="请输入短信内容"
+                android:inputType="textMultiLine"
+                android:minLines="5"
+                android:paddingStart="8dp"
+                android:singleLine="false"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/fontSize" />
+        </LinearLayout>
+        <!--Msg Start-->
+    </LinearLayout>
+
+</LinearLayout>

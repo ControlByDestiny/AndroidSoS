@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.NewContactActivity">
+
+    <!--ToolBar Start-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="添加紧急联系人"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/titleSize"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_confirm"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
+    <!--ToolBar End-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="紧急联系人姓名:"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/fontSize" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_et_input"
+                    android:hint="请输入联系人姓名"
+                    android:inputType="text"
+                    android:paddingStart="8dp"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/fontSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="紧急联系人手机:"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/fontSize" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_et_input"
+                    android:hint="请输入联系人手机"
+                    android:inputType="phone"
+                    android:paddingStart="8dp"
+                    android:maxLength="11"
+                    android:textSize="@dimen/fontSize"
+                    android:textColor="@color/fontColor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="求助短信内容:"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/fontSize" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_et_input"
+                    android:gravity="top"
+                    android:hint="请输入短信内容"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:paddingStart="8dp"
+                    android:singleLine="false"
+                    android:textSize="@dimen/fontSize"
+                    android:textColor="@color/fontColor"/>
+            </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
