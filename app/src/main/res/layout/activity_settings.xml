@@ -7,28 +7,18 @@
     android:orientation="vertical"
     tools:context=".ui.activity.SettingsActivity">
     <!--ToolBar Start-->
-    <LinearLayout
+    <com.sos.www.ui.customview.CustomToolBar
+        android:id="@+id/act_tb_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_light"
-        android:orientation="horizontal">
+        app:backgroundColor="@color/toolBarColor"
+        app:title="修改联系人"
+        app:titleSize="20sp"
+        app:leftIcon="@drawable/ic_back"
+        app:rightIcon="@drawable/ic_confirm"
+        >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="15dp"
-            android:layout_weight="1"
-            android:text="修改信息"
-            android:textColor="@color/titleColor"
-            android:textSize="@dimen/titleSize" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:background="@drawable/ic_confirm" />
-    </LinearLayout>
+    </com.sos.www.ui.customview.CustomToolBar>
     <!--ToolBar End-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,6 +71,7 @@
                 android:textSize="@dimen/fontSize" />
 
             <EditText
+                android:id="@+id/act_et_setting_name"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_weight="1"
@@ -138,6 +129,7 @@
                 android:textSize="@dimen/fontSize" />
 
             <EditText
+                android:id="@+id/act_et_setting_tel"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_weight="1"
@@ -197,6 +189,7 @@
                 android:textSize="@dimen/fontSize" />
 
             <EditText
+                android:id="@+id/act_et_setting_msg"
                 android:layout_width="wrap_content"
                 android:layout_height="160dp"
                 android:layout_weight="1"

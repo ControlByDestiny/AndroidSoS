@@ -7,27 +7,23 @@
     android:orientation="vertical"
     tools:context=".ui.activity.MainActivity">
 
-    <LinearLayout
+    <com.sos.www.ui.customview.CustomToolBar
+        android:id="@+id/act_tb_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@android:color/holo_blue_light"
+        app:backgroundColor="@color/toolBarColor"
+        app:title="Title"
+        app:titleSize="20sp"
+        app:rightIcon="@drawable/ic_setting_adjustment"
         >
-        <ImageView
-            android:id="@+id/act_btn_start1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:background="@drawable/ic_setting_adjustment"
-            android:layout_margin="15dp"
-            />
-    </LinearLayout>
 
+    </com.sos.www.ui.customview.CustomToolBar>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -43,7 +39,7 @@
                 android:background="@drawable/style_btn_start"
                 android:text="开始游戏"
                 android:textSize="16sp"
-                android:textColor="#2C2C2C"
+                android:textColor="#FFFFFF"
                 />
         </LinearLayout>
     </LinearLayout>

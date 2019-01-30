@@ -8,28 +8,17 @@
     tools:context=".ui.activity.NewContactActivity">
 
     <!--ToolBar Start-->
-    <LinearLayout
+    <com.sos.www.ui.customview.CustomToolBar
+        android:id="@+id/act_tb_new"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_light"
-        android:orientation="horizontal">
+        app:backgroundColor="@color/toolBarColor"
+        app:title="添加联系人"
+        app:titleSize="20sp"
+        app:rightIcon="@drawable/ic_confirm"
+        >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="添加紧急联系人"
-            android:textColor="@color/titleColor"
-            android:textSize="@dimen/titleSize"
-            android:layout_gravity="center"
-            android:layout_marginStart="15dp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_confirm"
-            android:layout_margin="15dp"/>
-    </LinearLayout>
+    </com.sos.www.ui.customview.CustomToolBar>
     <!--ToolBar End-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,6 +43,7 @@
                     android:textSize="@dimen/fontSize" />
 
                 <EditText
+                    android:id="@+id/act_et_new_name"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_weight="1"
@@ -80,6 +70,7 @@
                     android:textSize="@dimen/fontSize" />
 
                 <EditText
+                    android:id="@+id/act_et_new_tel"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_weight="1"
@@ -108,6 +99,7 @@
                     android:textSize="@dimen/fontSize" />
 
                 <EditText
+                    android:id="@+id/act_et_new_msg"
                     android:layout_width="wrap_content"
                     android:layout_height="160dp"
                     android:layout_weight="1"
