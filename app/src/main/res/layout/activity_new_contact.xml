@@ -12,8 +12,9 @@
         android:id="@+id/act_tb_new"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:backgroundColor="@color/toolBarColor"
+        app:backgroundColor="#FF0000"
         app:title="添加联系人"
+        app:titleColor="@android:color/white"
         app:titleSize="20sp"
         app:rightIcon="@drawable/ic_confirm"
         >
@@ -47,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_weight="1"
-                    android:background="@drawable/style_et_input"
+                    android:background="@drawable/selector_input_style"
                     android:hint="请输入联系人姓名"
                     android:inputType="text"
                     android:paddingStart="8dp"
@@ -74,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_weight="1"
-                    android:background="@drawable/style_et_input"
+                    android:background="@drawable/selector_input_style"
                     android:hint="请输入联系人手机"
                     android:inputType="phone"
                     android:paddingStart="8dp"
@@ -87,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:layout_weight="1"
+                android:layout_marginBottom="0dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -102,16 +103,26 @@
                     android:id="@+id/act_et_new_msg"
                     android:layout_width="wrap_content"
                     android:layout_height="160dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/style_et_input"
+                    android:background="@drawable/selector_input_style"
                     android:gravity="top"
                     android:hint="请输入短信内容"
                     android:inputType="textMultiLine"
                     android:minLines="5"
                     android:paddingStart="8dp"
                     android:singleLine="false"
+                    android:layout_weight="1"
                     android:textSize="@dimen/fontSize"
                     android:textColor="@color/fontColor"/>
             </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="*注意：添加好您的联系人信息，并确认无误，以保证您的求助短信以及相关信息能及时准确的发送到您所依赖的人手中。"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"/>
     </LinearLayout>
 </LinearLayout>

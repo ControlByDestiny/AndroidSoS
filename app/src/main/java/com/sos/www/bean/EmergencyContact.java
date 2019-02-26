@@ -1,22 +1,25 @@
 package com.sos.www.bean;
 
+import android.support.annotation.NonNull;
+
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.NotNull;
 import org.greenrobot.greendao.annotation.Property;
 import org.greenrobot.greendao.annotation.Generated;
 
 @Entity
 public class EmergencyContact {
     @Id( autoincrement = true)
-    private long id = 0;
+    private Long id;
     @Property
     private String name;
     @Property
     private String telNumber;
     @Property
     private String msgContent;
-    @Generated(hash = 1740566414)
-    public EmergencyContact(long id, String name, String telNumber,
+    @Generated(hash = 2132213621)
+    public EmergencyContact(Long id, String name, String telNumber,
             String msgContent) {
         this.id = id;
         this.name = name;
@@ -26,10 +29,10 @@ public class EmergencyContact {
     @Generated(hash = 1556367735)
     public EmergencyContact() {
     }
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getName() {
@@ -49,5 +52,11 @@ public class EmergencyContact {
     }
     public void setMsgContent(String msgContent) {
         this.msgContent = msgContent;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "ID:"+this.getId()+"-NAME:"+this.getName()+"-TEL:"+this.getTelNumber()+"-MSG:"+this.getMsgContent();
     }
 }

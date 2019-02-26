@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <declare-styleable name="CustomTextView">
+        <attr name="text" format="string|reference"/><!--文字内容-->
+        <attr name="textSize" format="dimension|reference"/><!--文字大小-->
+        <attr name="textColor" format="color|reference"/><!--文字颜色-->
+        <attr name="leftDrawable" format="color|reference"/><!--左边图标-->
+        <attr name="rightDrawable" format="color|reference"/><!--右边图标-->
+        <attr name="underLineColor" format="color|reference"/><!--底部线颜色-->
+        <attr name="underLineSize" format="dimension|reference"/><!--底部线长度-->
+        <attr name="itemBackgroundColor" format="color|reference"/><!--背景颜色-->
+    </declare-styleable>
+</resources>

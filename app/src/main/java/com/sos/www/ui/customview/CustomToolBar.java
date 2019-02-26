@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.sos.www.R;
 
 public class CustomToolBar extends Toolbar {
+    private static final String TAG = "CustomToolBar";
     //文本内容
     private CharSequence mText;
     //文本大小
@@ -69,6 +70,12 @@ public class CustomToolBar extends Toolbar {
         mRightImageView.setBackground(mRightIcon);
     }
 
+    public void setLeftIcon(Drawable drawable){
+        this.mLeftIcon = drawable;
+        this.mLeftImageView.setBackground(this.mLeftIcon);
+        this.mLeftImageView.setVisibility(this.mLeftIcon == null ? ImageView.GONE : ImageView.VISIBLE);
+    }
+
     private void initCustomStyle(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomToolBar);
         mText = typedArray.getText(R.styleable.CustomToolBar_title);
@@ -86,6 +93,13 @@ public class CustomToolBar extends Toolbar {
 
     public void setOnRightIconClickListener(OnClickListener onClickListener) {
         mRightImageView.setOnClickListener(onClickListener);
+    }
+
+    public void setRightIconEnabled(boolean enabled){
+        mRightImageView.setEnabled(enabled);
+    }
+    public boolean isRightEnabled(){
+        return mRightImageView.isEnabled();
     }
 
     private static int px2sp(Context context, int pxValue) {

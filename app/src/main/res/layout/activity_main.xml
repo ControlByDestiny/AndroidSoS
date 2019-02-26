@@ -11,25 +11,26 @@
         android:id="@+id/act_tb_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:backgroundColor="@color/toolBarColor"
-        app:title="Title"
+        app:backgroundColor="#FF0000"
+        app:title="@string/app_name"
         app:titleSize="20sp"
+        app:titleColor="@android:color/white"
         app:rightIcon="@drawable/ic_setting_adjustment"
         >
 
     </com.sos.www.ui.customview.CustomToolBar>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical"
-        >
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/act_btn_start"
@@ -38,9 +39,13 @@
                 android:layout_gravity="center"
                 android:background="@drawable/style_btn_start"
                 android:text="开始游戏"
-                android:textSize="16sp"
                 android:textColor="#FFFFFF"
-                />
+                android:elevation="2dp"
+                android:layout_margin="5dp"
+                android:stateListAnimator="@null"
+                android:textSize="@dimen/fontSize" />
+
+
         </LinearLayout>
     </LinearLayout>
 

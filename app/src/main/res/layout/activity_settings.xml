@@ -11,199 +11,58 @@
         android:id="@+id/act_tb_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:backgroundColor="@color/toolBarColor"
+        app:backgroundColor="#FF0000"
         app:title="修改联系人"
         app:titleSize="20sp"
+        app:titleColor="@android:color/white"
         app:leftIcon="@drawable/ic_back"
-        app:rightIcon="@drawable/ic_confirm"
+        app:rightIcon="@drawable/selector_save_status"
         >
 
     </com.sos.www.ui.customview.CustomToolBar>
     <!--ToolBar End-->
-    <LinearLayout
+    <com.sos.www.ui.customview.CustomTextView
+        android:id="@+id/item_btn_setting_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:background="@drawable/style_btn_start"
+        app:leftDrawable="@drawable/ic_update"
+        app:rightDrawable="@drawable/ic_right"
+        app:text="修改联系人"
+        app:textSize="@dimen/fontSize"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/fontSize" />
+    <ListView
+        android:id="@+id/act_setting_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:longClickable="true"
+        android:visibility="gone"
+        >
+    </ListView>
+    <TextView
+        android:id="@+id/act_setting_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*提示：长按删除联系人"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        />
+    <com.sos.www.ui.customview.CustomTextView
+        android:id="@+id/item_btn_setting_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:leftDrawable="@drawable/ic_add"
+        app:rightDrawable="@drawable/ic_right"
+        app:text="添加新联系人"
+        app:textSize="@dimen/fontSize"
+        android:textSize="@dimen/fontSize" />
 
-        <!--Name Start-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="姓名"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-
-            <CheckBox
-                android:id="@+id/act_btn_show_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/selector_item_status"
-                android:button="@null"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/name_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:orientation="horizontal"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="紧急联系人姓名:"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-
-            <EditText
-                android:id="@+id/act_et_setting_name"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                android:background="@drawable/style_et_input"
-                android:hint="请输入联系人姓名"
-                android:inputType="text"
-                android:paddingStart="8dp"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-        </LinearLayout>
-
-        <!--Name End-->
-
-        <!--Tel Start-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="联系方式"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-
-            <CheckBox
-                android:id="@+id/act_btn_show_tel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/selector_item_status"
-                android:button="@null"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/tel_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:orientation="horizontal"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="紧急联系人手机:"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-
-            <EditText
-                android:id="@+id/act_et_setting_tel"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                android:background="@drawable/style_et_input"
-                android:hint="请输入联系人手机"
-                android:inputType="phone"
-                android:maxLength="11"
-                android:paddingStart="8dp"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-        </LinearLayout>
-
-        <!--Tel End-->
-
-        <!--Msg Start-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="短信内容"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-
-            <CheckBox
-                android:id="@+id/act_btn_show_msg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/selector_item_status"
-                android:button="@null"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/msg_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="求助短信内容:"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-
-            <EditText
-                android:id="@+id/act_et_setting_msg"
-                android:layout_width="wrap_content"
-                android:layout_height="160dp"
-                android:layout_weight="1"
-                android:background="@drawable/style_et_input"
-                android:gravity="top"
-                android:hint="请输入短信内容"
-                android:inputType="textMultiLine"
-                android:minLines="5"
-                android:paddingStart="8dp"
-                android:singleLine="false"
-                android:textColor="@color/fontColor"
-                android:textSize="@dimen/fontSize" />
-        </LinearLayout>
-        <!--Msg Start-->
-    </LinearLayout>
 
 </LinearLayout>

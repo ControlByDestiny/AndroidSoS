@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#ffd39b</color>
+    <color name="colorPrimaryDark">#eec28a</color>
     <color name="colorAccent">#D81B60</color>
     <color name="titleColor">#2C2C2C</color>
     <color name="fontColor">#3C3C3C</color>
-    <color name="toolBarColor">#008577</color>
+    <color name="toolBarColor">#FF0000</color>
+    <color name="listItemBackGround">#F8F8F8</color>
+    <color name="seekbar_unprogressed">#9A9A9A</color>
 </resources>
